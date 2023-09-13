@@ -16,7 +16,7 @@ func ReverseAsciiArt() {
 		os.Exit(0)
 	}
 
-	//read art file for reverse
+	// read art file for reverse
 	textFile := os.Args[1][10:] // 10 is the len of --reverse=
 	file, err := os.Open(textFile)
 	if err != nil {
@@ -35,7 +35,7 @@ func ReverseAsciiArt() {
 		textDatatest := strings.TrimSpace(textData)
 		asciiArt := strings.Split(textData, "\n")
 
-		BannerName := ""
+		BannerName := "standard.txt"
 		for _, supStr := range textDatatest {
 			if strings.Contains(string(supStr), "o") {
 				BannerName = "thinkertoy.txt"
@@ -50,7 +50,7 @@ func ReverseAsciiArt() {
 		}
 
 		// if we get from checkArgs true, work BannerLines =)
-		//read Banner art
+		// read Banner art
 		fmt.Println("BannerName:", BannerName)
 		fContent, err := os.ReadFile(BannerName)
 		if err != nil {
@@ -61,7 +61,7 @@ func ReverseAsciiArt() {
 		Banner := strings.Split(fontData, "\n")
 		c := 0
 
-		//If the file contains more than one object ascii-art
+		// If the file contains more than one object ascii-art
 		if len(asciiArt) > 9 {
 			for i := 0; i < len(asciiArt)-1; {
 				if len(asciiArt[i]) > 0 {
@@ -91,13 +91,11 @@ var x = 0
 
 // LattersFound - symbol in ascii-art file(input.txt). ArtLine - count of lines in ascii-art file(input.txt). BannerLine - number of line in Banner(standard.txt)
 func reverse(Banner []string, asciiArt []string, LattersFound int, ArtLine int, BannerLine int) {
-
-	if LattersFound != len(asciiArt[ArtLine]) { //if we are not finish reverse.
+	if LattersFound != len(asciiArt[ArtLine]) { // if we are not finish reverse.
 
 		bannerWidth := len(Banner[BannerLine]) // len of candite for research
 
 		if LattersFound+bannerWidth <= len(asciiArt[ArtLine]) {
-
 			if ArtLine < 7 { // befor the last line
 				if Banner[BannerLine+ArtLine] == asciiArt[ArtLine][LattersFound:LattersFound+bannerWidth] { // if the Banner-line equal the sup line of ascii-art
 					reverse(Banner, asciiArt, LattersFound, ArtLine+1, BannerLine) // compare the next lines "next rows of each"
@@ -114,7 +112,6 @@ func reverse(Banner []string, asciiArt []string, LattersFound int, ArtLine int, 
 				fmt.Printf("%c", r)
 				reverse(Banner, asciiArt, LattersFound+bannerWidth, 0, 1) // we redo with the next sup line of the ascii-art
 			}
-
 		} else {
 			x = BannerLine + 9
 			if len(Banner)-1-x < 9 && len(Banner)-1-x != 0 {
@@ -125,7 +122,6 @@ func reverse(Banner []string, asciiArt []string, LattersFound int, ArtLine int, 
 		}
 
 	}
-
 }
 
 func ReadInput(file io.Reader) bool {
@@ -142,9 +138,11 @@ func ReadInput(file io.Reader) bool {
 		}
 
 		// Check for an empty line indicating newline
-		if line == "" {
+		if line == "" && lineCount == 0 {
 			continue
-		}
+		} else if line == "" && lineCount != 0 {
+			fmt.Printf("ERROR3: at line %d\n", counter)
+		} 
 
 		if len(line) != latterWidth {
 			// Check for invalid line length
@@ -165,7 +163,10 @@ func ReadInput(file io.Reader) bool {
 
 		}
 	}
-
+	if lineCount != 0 {
+		fmt.Printf("ERROR3: at line %d\n", counter)
+		os.Exit(0)
+	}
 	// Check for scanner errors and handle them
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
