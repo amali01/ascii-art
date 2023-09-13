@@ -1,12 +1,7 @@
-```bash
-                                                __          __         _                                           _                  
-                                                \ \        / /        | |                                         | |                 
-                                                 \ \  /\  / /    ___  | |   ___    ___    _ __ ___     ___        | |_    ___         
-                                                  \ \/  \/ /    / _ \ | |  / __|  / _ \  | '_ ` _ \   / _ \       | __|  / _ \        
-                                                   \  /\  /    |  __/ | | | (__  | (_) | | | | | | | |  __/       \ |_  | (_) |       
-                                                    \/  \/      \___| |_|  \___|  \___/  |_| |_| |_|  \___|        \__|  \___/        
-                                                                                                                                      
-                                                                                                                                      
+  ## Welcome to the :
+  
+  ```html
+  
                                            _____    _____   _____   _____                    _____    _______         _____    _____     ____   
                                   /\      / ____|  / ____| |_   _| |_   _|           /\     |  __ \  |__   __|       |  __ \  |  __ \   / __ \  
                                  /  \    | (___   | |        | |     | |            /  \    | |__) |    | |          | |__) | | |__) | | |  | | 
@@ -31,9 +26,10 @@
                |_.__/   \__, |       /_/    \_\ |_| |_| |_|   | |  \__,_|  \__,_| ( ) |______| |_| |_| |_|  \__,_| |_| |_| ( ) /_/    \_\  \__,_| |_| |_|  \__,_| |_| |_| 
                         __/ /                                _/ |                 |/                                       |/                                             
                        |___/                                |__/                                                                                                          
-               
-               
+  
 ```
+
+
 # Ascii-Art
 
 - This is a Go program that allow users to draw ASCII Art from the input.
@@ -87,11 +83,11 @@ gold, teal, lavender, brown, lightblue, magenta, olive, salmon, skyblue, darkpur
 ```
 - For a faster audit, you can use 'testall.sh' to cheak all the examples in the test folder.
 
-#### Usefull linkes
+## Usefull linkes
 uni code https://web.itu.edu.tr/~sgunduz/courses/mikroisl/ascii.html
 
 
 
-#### Creator
+## Creator
 
  emahfood - amali - ajaberi
