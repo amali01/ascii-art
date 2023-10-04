@@ -35,6 +35,7 @@ go run . [OPTIONS] [FILE|DIR]
 ├── main.go
 ├── go.mod
 ├── README.md
+├── testfiles.zip
 └── ...
 ```
 ## Examples
@@ -68,7 +69,8 @@ go run . -lraRt
 
 ## Additional information
 
-Only standard go packages were in use.
+- Only standard go packages were in use.
+- for better testing extract file "testfiles.zip"
 
 ## Authors
 
