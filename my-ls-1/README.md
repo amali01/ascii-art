@@ -3,13 +3,11 @@
 
 <p align="center">
     <img src="logo1.png" alt="My-Ls Logo" />
-    <img src="myLsLogo.png" alt="My-Ls Logo" />
+    <!-- <img src="myLsLogo.png" alt="My-Ls Logo" /> -->
 </p>
 
 <h2 align="center">About The Project</h2>
-<h4 align="center">My-ls is a project, that consists on creating your own ls command.
-</h4>
-
+<h4 align="center">My-ls is a project that aims to create a custom ls command using Go.</h4>
 
 ## Getting Started
 You can run the My-Ls project with the following command:
