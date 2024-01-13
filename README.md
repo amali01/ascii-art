@@ -30,13 +30,12 @@
 Clone the project
 
 ```bash
-git clone https://learn.reboot01.com/git/amali/ascii-art-reverse.git
+git clone https://github.com/amali01/ascii-art.git
 ```
-
 Go to the project directory
 
 ```bash
-  cd ascii-art-reverse
+  cd ascii-art
 ```
 
 **Example how to run the program:**
@@ -78,4 +77,4 @@ uni code https://web.itu.edu.tr/~sgunduz/courses/mikroisl/ascii.html
 
 ## Creator
 
- emahfood - amali - ajaberi
+ emahfoodh - amali - ajaberi
